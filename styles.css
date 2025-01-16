@@ -1,0 +1,506 @@
+/* General Reset */
+/* Reset margin, padding, and box-sizing for all elements */
+* {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Body styling */
+/* Set font, line-height, text color, and background color for the body */
+body {
+  font-family: Arial, sans-serif; /* Set font family */
+  line-height: 1.6; /* Set line height */
+  color: #333; /* Set text color */
+  background: #f9f9f9; /* Set background color */
+}
+
+/* Header styling */
+/* Style the header section */
+.header {
+  background: #4CAF50; /* Set background color */
+  color: white; /* Set text color */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out items */
+  align-items: center; /* Align items vertically */
+  padding: 1rem 2rem; /* Add padding */
+}
+
+/* Logo styling */
+/* Style the logo inside the header */
+.header .logo {
+  font-size: 1.5rem; /* Set font size */
+  font-weight: bold; /* Make text bold */
+}
+
+/* Navigation links styling */
+/* Style the navigation links inside the header */
+.header .nav a {
+  color: white; /* Set text color */
+  text-decoration: none; /* Remove underline */
+  margin: 0 0.5rem; /* Add margin */
+}
+
+/* Primary button styling */
+/* Style the primary button inside the header */
+.header .nav .btn-primary {
+  background: white; /* Set background color */
+  color: #4CAF50; /* Set text color */
+  border: none; /* Remove border */
+  padding: 0.5rem 1rem; /* Add padding */
+  border-radius: 5px; /* Round the corners */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Primary button hover effect */
+/* Change background color on hover for the primary button */
+.header .nav .btn-primary:hover {
+  background: #ddd; /* Set hover background color */
+}
+
+/* Hero section styling */
+/* Style the hero section */
+.hero {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space out items */
+  padding: 2rem; /* Add padding */
+  background: linear-gradient(to right, #4CAF50, #3E8E41); /* Set background gradient */
+  color: white; /* Set text color */
+}
+
+/* Hero content heading styling */
+/* Style the heading inside the hero content */
+.hero-content h1 {
+  font-size: 2.5rem; /* Set font size */
+  margin-bottom: 1rem; /* Add bottom margin */
+}
+
+/* Hero content paragraph styling */
+/* Style the paragraph inside the hero content */
+.hero-content p {
+  font-size: 1.2rem; /* Set font size */
+  margin-bottom: 1.5rem; /* Add bottom margin */
+}
+
+/* Hero buttons styling */
+/* Style the primary and secondary buttons inside the hero section */
+.hero-buttons .btn-primary,
+.hero-buttons .btn-secondary {
+  background: white; /* Set background color */
+  color: #4CAF50; /* Set text color */
+  border: none; /* Remove border */
+  padding: 0.75rem 1.5rem; /* Add padding */
+  border-radius: 5px; /* Round the corners */
+  cursor: pointer; /* Change cursor on hover */
+  margin-right: 0.5rem; /* Add right margin */
+}
+
+/* Secondary button styling */
+/* Style the secondary button inside the hero section */
+.hero-buttons .btn-secondary {
+  background: #ddd; /* Set background color */
+}
+
+/* Hero buttons hover effect */
+/* Change background color on hover for the primary and secondary buttons */
+.hero-buttons .btn-primary:hover,
+.hero-buttons .btn-secondary:hover {
+  background: #ccc; /* Set hover background color */
+}
+
+/* Search and sort section styling */
+/* Style the search and sort section */
+.search-sort {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Align items vertically */
+  gap: 1rem; /* Add gap between items */
+  padding: 1rem; /* Add padding */
+  background: #f4f4f4; /* Set background color */
+}
+
+/* Search bar styling */
+/* Style the search bar */
+.search-bar {
+  width: 60%; /* Set width */
+  padding: 0.5rem; /* Add padding */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Round the corners */
+}
+
+/* Sort button styling */
+/* Style the sort button */
+#sortBtn {
+  background: #4CAF50; /* Set background color */
+  color: white; /* Set text color */
+  border: none; /* Remove border */
+  padding: 0.5rem 1rem; /* Add padding */
+  border-radius: 5px; /* Round the corners */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Sort button hover effect */
+/* Change background color on hover for the sort button */
+#sortBtn:hover {
+  background: #3E8E41; /* Set hover background color */
+}
+
+/* Featured polls section styling */
+/* Style the featured polls section */
+.featured {
+  text-align: center; /* Center text */
+  padding: 2rem 1rem; /* Add padding */
+  background: white; /* Set background color */
+}
+
+/* Featured polls heading styling */
+/* Style the heading inside the featured polls section */
+.featured h2 {
+  font-size: 2rem; /* Set font size */
+  margin-bottom: 1rem; /* Add bottom margin */
+}
+
+/* Polls container styling */
+/* Style the container for polls */
+.polls {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  gap: 1rem; /* Add gap between items */
+  margin-top: 1rem; /* Add top margin */
+}
+
+/* Poll card styling */
+/* Style the individual poll cards */
+.poll-card {
+  background: #f4f4f4; /* Set background color */
+  padding: 1rem; /* Add padding */
+  border-radius: 5px; /* Round the corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  width: 200px; /* Set width */
+  text-align: center; /* Center text */
+}
+
+/* Poll card heading styling */
+/* Style the heading inside the poll card */
+.poll-card h3 {
+  font-size: 1.2rem; /* Set font size */
+  margin-bottom: 0.5rem; /* Add bottom margin */
+}
+
+/* Poll card primary button styling */
+/* Style the primary button inside the poll card */
+.poll-card .btn-primary {
+  background: #4CAF50; /* Set background color */
+  color: white; /* Set text color */
+  padding: 0.5rem 1rem; /* Add padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Round the corners */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Poll card primary button hover effect */
+/* Change background color on hover for the primary button inside the poll card */
+.poll-card .btn-primary:hover {
+  background: #3E8E41; /* Set hover background color */
+}
+
+/* Real-time results section styling */
+/* Style the real-time results section */
+.results-section {
+  padding: 2rem 1rem; /* Add padding */
+  text-align: center; /* Center text */
+  background: white; /* Set background color */
+  margin-top: 1rem; /* Add top margin */
+}
+
+/* Real-time results heading styling */
+/* Style the heading inside the real-time results section */
+.results-section h2 {
+  font-size: 1.8rem; /* Set font size */
+  margin-bottom: 1rem; /* Add bottom margin */
+  color: #4CAF50; /* Set text color */
+}
+
+/* Results item styling */
+/* Style the individual results items */
+.results-item {
+  background: #f9f9f9; /* Set background color */
+  padding: 1rem; /* Add padding */
+  margin: 0.5rem auto; /* Add margin */
+  border-radius: 5px; /* Round the corners */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  width: 80%; /* Set width */
+}
+
+/* Profile section styling */
+/* Style the profile section */
+.profile {
+  padding: 2rem 1rem; /* Add padding */
+  background: #f9f9f9; /* Set background color */
+  text-align: center; /* Center text */
+}
+
+/* Profile heading styling */
+/* Style the heading inside the profile section */
+.profile h2 {
+  font-size: 2rem; /* Set font size */
+  margin-bottom: 1rem; /* Add bottom margin */
+}
+
+/* Vote history list styling */
+/* Style the vote history list */
+.profile #voteHistory {
+  list-style: none; /* Remove list style */
+  padding: 0; /* Remove padding */
+  margin: 1rem 0; /* Add margin */
+}
+
+/* Vote history list item styling */
+/* Style the individual list items inside the vote history */
+.profile #voteHistory li {
+  padding: 0.5rem; /* Add padding */
+  margin: 0.5rem auto; /* Add margin */
+  background: white; /* Set background color */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Round the corners */
+  width: 60%; /* Set width */
+  text-align: left; /* Align text to the left */
+}
+
+/* Modal styling */
+/* Style the modal */
+.modal {
+  display: none; /* Hide modal by default */
+  position: fixed; /* Fix position */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100%; /* Set width */
+  height: 100%; /* Set height */
+  background: rgba(0, 0, 0, 0.5); /* Set background color with transparency */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+/* Additional CSS for New Features */
+
+/* Poll creation section styling */
+/* Style the poll creation section */
+.poll-creation {
+  padding: 2rem; /* Add padding */
+  background: #f9f9f9; /* Set background color */
+  text-align: center; /* Center text */
+}
+
+/* Poll creation heading styling */
+/* Style the heading inside the poll creation section */
+.poll-creation h2 {
+  font-size: 2rem; /* Set font size */
+  margin-bottom: 1rem; /* Add bottom margin */
+}
+
+/* Poll creation form styling */
+/* Style the form inside the poll creation section */
+.poll-creation form {
+  max-width: 400px; /* Set maximum width */
+  margin: 0 auto; /* Center form */
+}
+
+/* Poll creation label styling */
+/* Style the labels inside the poll creation form */
+.poll-creation label {
+  display: block; /* Display as block */
+  margin: 0.5rem 0; /* Add margin */
+}
+
+/* Poll creation input styling */
+/* Style the inputs inside the poll creation form */
+.poll-creation input {
+  width: 100%; /* Set width */
+  padding: 0.75rem; /* Add padding */
+  margin-bottom: 1rem; /* Add bottom margin */
+  border: 1px solid #ddd; /* Add border */
+  border-radius: 5px; /* Round the corners */
+}
+
+/* Poll creation button styling */
+/* Style the button inside the poll creation form */
+.poll-creation button {
+  background-color: #4CAF50; /* Set background color */
+  color: white; /* Set text color */
+  border: none; /* Remove border */
+  padding: 0.75rem 1.5rem; /* Add padding */
+  border-radius: 5px; /* Round the corners */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Poll creation button hover effect */
+/* Change background color on hover for the button inside the poll creation form */
+.poll-creation button:hover {
+  background-color: #3E8E41; /* Set hover background color */
+}
+
+/* Poll results vote count styling */
+/* Style the vote count inside the poll results */
+.vote-count {
+  font-weight: bold; /* Make text bold */
+  color: #4CAF50; /* Set text color */
+}
+
+/* Modal content styling */
+/* Style the content inside the modal */
+.modal-content {
+  background: white; /* Set background color */
+  padding: 2rem; /* Add padding */
+  border-radius: 5px; /* Round the corners */
+  width: 300px; /* Set width */
+  text-align: center; /* Center text */
+  position: relative; /* Set position */
+}
+
+/* Close button styling */
+/* Style the close button inside the modal */
+.close-btn {
+  position: absolute; /* Set position */
+  top: 10px; /* Align to top */
+  right: 15px; /* Align to right */
+  font-size: 1.5rem; /* Set font size */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Footer styling */
+/* Style the footer */
+.footer {
+  text-align: center; /* Center text */
+  padding: 1rem; /* Add padding */
+  background: #333; /* Set background color */
+  color: white; /* Set text color */
+}
+
+/* Footer links styling */
+/* Style the links inside the footer */
+.footer a {
+  color: #4CAF50; /* Set text color */
+  text-decoration: none; /* Remove underline */
+  margin: 0 0.5rem; /* Add margin */
+}
+
+/* Footer links hover effect */
+/* Add underline on hover for the links inside the footer */
+.footer a:hover {
+  text-decoration: underline; /* Add underline */
+}
+
+/* Media Queries for Responsive Design */
+
+/* Mobile - Small screens */
+/* Style for screens with max width of 576px */
+@media (max-width: 576px) {
+  .header {
+    flex-direction: column; /* Stack items vertically */
+    padding: 1rem; /* Add padding */
+  }
+
+  .hero {
+    flex-direction: column; /* Stack items vertically */
+    padding: 1rem; /* Add padding */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* Set font size */
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* Set font size */
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    padding: 0.5rem 1rem; /* Add padding */
+    font-size: 1rem; /* Set font size */
+  }
+
+  .search-bar {
+    width: 100%; /* Set width */
+  }
+
+  .polls {
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Add gap between items */
+  }
+
+  .poll-card {
+    width: 100%; /* Set width */
+  }
+
+  .profile #voteHistory li {
+    width: 100%; /* Set width */
+  }
+
+  .poll-creation form {
+    width: 100%; /* Set width */
+  }
+}
+
+/* Tablet - Medium screens */
+/* Style for screens with max width of 768px */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack items vertically */
+    padding: 1.5rem; /* Add padding */
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    padding: 0.5rem 1.25rem; /* Add padding */
+    font-size: 1.1rem; /* Set font size */
+  }
+
+  .polls {
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem; /* Add gap between items */
+  }
+
+  .poll-card {
+    width: 100%; /* Set width */
+  }
+
+  .poll-creation form {
+    width: 80%; /* Set width */
+  }
+}
+
+/* Desktop - Large screens */
+/* Style for screens with min width of 1024px */
+@media (min-width: 1024px) {
+  .header {
+    padding: 1rem 4rem; /* Add padding */
+  }
+
+  .hero-content h1 {
+    font-size: 3rem; /* Set font size */
+  }
+
+  .hero-content p {
+    font-size: 1.5rem; /* Set font size */
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    padding: 1rem 2rem; /* Add padding */
+    font-size: 1.2rem; /* Set font size */
+  }
+
+  .poll-card {
+    width: 250px; /* Set width */
+  }
+
+  .footer {
+    font-size: 1.2rem; /* Set font size */
+    padding: 2rem; /* Add padding */
+  }
+
+  .poll-creation form {
+    width: 60%; /* Set width */
+  }
+}

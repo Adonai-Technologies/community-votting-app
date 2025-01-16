@@ -1,0 +1,107 @@
+<!DOCTYPE html> <!-- Defines the document type as HTML5 -->
+<html lang="en"> <!-- Opens the HTML document and sets the language to English -->
+<head> <!-- Head section containing meta information and links -->
+  <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering and touch zooming on mobile devices -->
+  <title>Community Voting App</title> <!-- Sets the title of the webpage -->
+  <link rel="stylesheet" href="styles.css"> <!-- Links to the external CSS stylesheet -->
+</head>
+<body> <!-- Opens the body section of the HTML document -->
+  <!-- Header Section -->
+  <header class="header"> <!-- Header section with a class of 'header' -->
+    <div class="logo">VoteNow</div> <!-- Logo div with the text 'VoteNow' -->
+    <nav class="nav"> <!-- Navigation section with a class of 'nav' -->
+      <a href="#">Home</a> <!-- Navigation link to Home -->
+      <a href="#">Create Vote</a> <!-- Navigation link to Create Vote -->
+      <a href="#">View Votes</a> <!-- Navigation link to View Votes -->
+      <a href="#">About</a> <!-- Navigation link to About -->
+      <button class="btn-primary" id="loginBtn">Login</button> <!-- Login button with a class of 'btn-primary' and an id of 'loginBtn' -->
+      <button class="btn-primary" id="logoutBtn" style="display: none;">Logout</button> <!-- Logout button with a class of 'btn-primary', an id of 'logoutBtn', and initially hidden -->
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero"> <!-- Hero section with a class of 'hero' -->
+    <div class="hero-content"> <!-- Div containing hero content -->
+      <h1>Empower Your Community's Voice</h1> <!-- Main heading of the hero section -->
+      <p>Create, participate in, and manage votes with ease.</p> <!-- Paragraph describing the app -->
+      <div class="hero-buttons"> <!-- Div containing hero buttons -->
+        <button class="btn-primary" id="getStartedBtn">Get Started</button> <!-- Get Started button with a class of 'btn-primary' and an id of 'getStartedBtn' -->
+        <button class="btn-secondary">Explore Votes</button> <!-- Explore Votes button with a class of 'btn-secondary' -->
+      </div>
+    </div>
+    <div class="hero-image"> <!-- Div containing the hero image -->
+      <img src="img/hero.png" alt="Community Voting"> <!-- Image with a source and alt text -->
+    </div>
+  </section>
+
+  <!-- Featured Polls Section -->
+  <section class="featured"> <!-- Featured polls section with a class of 'featured' -->
+    <h2>Featured Votes</h2> <!-- Heading for the featured votes section -->
+    <div class="polls"> <!-- Div containing the polls -->
+      <div class="poll-card"> <!-- Div for a poll card -->
+        <h3>Vote on the Community Park Design</h3> <!-- Poll title -->
+        <p>Deadline: Jan 30, 2025</p> <!-- Poll deadline -->
+        <button class="btn-primary vote-now" data-vote="Community Park">Vote Now</button> <!-- Vote Now button with a class of 'btn-primary vote-now' and a data attribute -->
+        <p>Votes: <span class="vote-count" data-vote="Community Park">0</span></p> <!-- Vote count with a span element and a data attribute -->
+      </div>
+      <div class="poll-card"> <!-- Div for another poll card -->
+        <h3>Favorite Local Charity</h3> <!-- Poll title -->
+        <p>Deadline: Feb 10, 2025</p> <!-- Poll deadline -->
+        <button class="btn-primary vote-now" data-vote="Local Charity">Vote Now</button> <!-- Vote Now button with a class of 'btn-primary vote-now' and a data attribute -->
+        <p>Votes: <span class="vote-count" data-vote="Local Charity">0</span></p> <!-- Vote count with a span element and a data attribute -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Poll Creation Form -->
+  <section class="poll-creation"> <!-- Poll creation section with a class of 'poll-creation' -->
+    <h2>Create a New Poll</h2> <!-- Heading for the poll creation section -->
+    <form id="createPollForm"> <!-- Form for creating a new poll with an id of 'createPollForm' -->
+      <label for="pollTitle">Poll Title</label> <!-- Label for the poll title input -->
+      <input type="text" id="pollTitle" required> <!-- Text input for the poll title with an id of 'pollTitle' and required attribute -->
+      <label for="pollDeadline">Deadline</label> <!-- Label for the poll deadline input -->
+      <input type="date" id="pollDeadline" required> <!-- Date input for the poll deadline with an id of 'pollDeadline' and required attribute -->
+      <button type="submit" class="btn-primary">Create Poll</button> <!-- Submit button with a class of 'btn-primary' -->
+    </form>
+  </section>
+
+  <!-- Modal for Login -->
+  <div id="authModal" class="modal"> <!-- Div for the authentication modal with an id of 'authModal' and a class of 'modal' -->
+    <div class="modal-content"> <!-- Div for the modal content -->
+      <h2>Login</h2> <!-- Heading for the login form -->
+      <form id="loginForm"> <!-- Login form with an id of 'loginForm' -->
+        <label for="loginUsername">Username</label> <!-- Label for the login username input -->
+        <input type="text" id="loginUsername" required> <!-- Text input for the login username with an id of 'loginUsername' and required attribute -->
+        <label for="loginPassword">Password</label> <!-- Label for the login password input -->
+        <input type="password" id="loginPassword" required> <!-- Password input for the login password with an id of 'loginPassword' and required attribute -->
+        <button type="button" class="btn-primary" onclick="login()">Login</button> <!-- Login button with a class of 'btn-primary' and an onclick event to call the login function -->
+        <p>Don't have an account? <a href="#" id="signupToggle">Sign Up</a></p> <!-- Paragraph with a link to toggle to the signup form -->
+      </form>
+
+      <form id="signupForm" style="display: none;"> <!-- Signup form with an id of 'signupForm' and initially hidden -->
+        <label for="signupUsername">Username</label> <!-- Label for the signup username input -->
+        <input type="text" id="signupUsername" required> <!-- Text input for the signup username with an id of 'signupUsername' and required attribute -->
+        <label for="signupPassword">Password</label> <!-- Label for the signup password input -->
+        <input type="password" id="signupPassword" required> <!-- Password input for the signup password with an id of 'signupPassword' and required attribute -->
+        <label for="confirmPassword">Confirm Password</label> <!-- Label for the confirm password input -->
+        <input type="password" id="confirmPassword" required> <!-- Password input for the confirm password with an id of 'confirmPassword' and required attribute -->
+        <button type="button" class="btn-primary" onclick="register()">Sign Up</button> <!-- Signup button with a class of 'btn-primary' and an onclick event to call the register function -->
+        <p>Already have an account? <a href="#" id="signupToggle">Login</a></p> <!-- Paragraph with a link to toggle to the login form -->
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer"> <!-- Footer section with a class of 'footer' -->
+    <p>&copy; 2025 VoteNow. All Rights Reserved.</p> <!-- Copyright notice -->
+    <nav class="footer-nav"> <!-- Footer navigation section with a class of 'footer-nav' -->
+      <a href="#">Privacy Policy</a> <!-- Link to the Privacy Policy -->
+      <a href="#">Terms of Service</a> <!-- Link to the Terms of Service -->
+      <a href="#">Contact Us</a> <!-- Link to the Contact Us page -->
+    </nav>
+  </footer>
+
+  <script src="script.js"></script> <!-- Link to the external JavaScript file -->
+</body>
+</html> <!-- Closes the HTML document -->
