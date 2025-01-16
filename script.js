@@ -110,6 +110,53 @@ userVotes.forEach(vote => {
   voteHistory.appendChild(listItem); // Append the list item to the vote history
 });
 
+// Function to Logout
+function logout() {
+  alert('You have logged out!');
+  // Clear session storage
+  sessionStorage.clear();
+  // Clear local storage
+  localStorage.clear();
+  // Redirect to the login page
+  window.location.href = 'login.html';
+}
+
+// Enhanced Search Polls
+searchBar.addEventListener('input', () => {
+  const query = searchBar.value.toLowerCase();
+  const pollCards = document.querySelectorAll('.poll-card');
+
+  pollCards.forEach(card => {
+    const pollTitle = card.querySelector('h3').textContent.toLowerCase();
+    if (pollTitle.includes(query)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});
+
+
+// Enhanced Sorting Polls
+sortBtn.addEventListener('click', () => {
+  const pollCards = Array.from(document.querySelectorAll('.poll-card'));
+  pollCards.sort((a, b) => {
+    const titleA = a.querySelector('h3').textContent.toLowerCase();
+    const titleB = b.querySelector('h3').textContent.toLowerCase();
+    return titleA.localeCompare(titleB);
+  });
+
+  const pollsContainer = document.querySelector('.polls');
+  pollsContainer.innerHTML = '';
+  pollCards.forEach(card => pollsContainer.appendChild(card));
+});
+
+
+
+// Add event listener to the logout button
+document.getElementById('logoutBtn').addEventListener('click', logout);
+
+
 // Function to Logout (Placeholder)
 function logout() {
   alert('You have logged out!'); // Show logout alert
@@ -122,4 +169,11 @@ function logout() {
   
   // Redirect to the login page
   window.location.href = 'login.html'; // Redirect to the login page
+}
+// Add event listener to the "Get Started" button
+document.getElementById('getStartedBtn').addEventListener('click', handleGetStartedClick);
+// Function to handle "Get Started" button click
+function handleGetStartedClick() {
+  alert('Get Started button clicked!');
+  // Add your logic here
 }
